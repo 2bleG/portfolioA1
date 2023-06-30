@@ -23,23 +23,25 @@ header {
     height: auto;
     box-sizing: border-box;
     resize: vertical;
-    padding-left: 8%;
-    padding-right: 8%;
-    padding-top: 50px;
-    padding-bottom: 80px;
     text-align: center;
     z-index: 5;
-    margin-bottom: 200px;
-}
-
-h1 {
-    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
 }
 
 #para {
     line-height: 2rem;
     font-size: 1rem;
+    text-align: start;  
 }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
 
 /* MAIN */
 
@@ -58,7 +60,8 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
-}
+    overflow: hidden;
+  }
 
 #hexgrid .grid {
     position: absolute;
@@ -110,15 +113,16 @@ main {
 .textleft {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background-color: rgba(128, 128, 128, 0.7);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 37%);
-    backdrop-filter: blur(3px);
     max-width: 750px;
     padding: 15px;
     margin-left: 20px;
     font-size: 1rem;
     line-height: 1.5rem;
-    border: 2px solid  rgba(128, 128, 128, 0.18);
+    background: linear-gradient( 0deg, rgba(135, 135, 135, 0.2), rgba(255, 255, 255, 0.25));
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 37%);
+    backdrop-filter: blur(4px);
+    border-radius: 3px;
+    border: 1px solid  rgba(255, 255, 255, 0.18);
 }
 
 
@@ -148,15 +152,16 @@ main {
 .textright {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background-color: rgba(128, 128, 128, 0.7);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 37%);
-    backdrop-filter: blur(3px);
     max-width: 750px;
     padding: 15px;
     margin-left: 20px;
     font-size: 1rem;
     line-height: 1.5rem;
-    border: 2px solid  rgba(128, 128, 128, 0.18);
+    background: linear-gradient( 0deg, rgba(135, 135, 135, 0.2), rgba(255, 255, 255, 0.25));
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 37%);
+    backdrop-filter: blur(4px);
+    border-radius: 3px;
+    border: 1px solid  rgba(255, 255, 255, 0.18);
 }
 
 /* FORMULAIRE */
@@ -182,6 +187,13 @@ main {
     padding: 15px;
 }
 
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
 #sujetForm {
     height: 200px;
     margin-bottom: 20px;
@@ -190,6 +202,18 @@ main {
 ::placeholder {
     color: #fff;
 }
+
+label {
+    display: block;
+    padding: 5px;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 10x;
+    color: #fff;
+    resize: none;
+  }
 
 input[type=text],select, textarea {
     width: 100%;
@@ -203,20 +227,23 @@ input[type=text],select, textarea {
     resize: none;
 }
 
-input[type=submit] {
+button[type=submit] {
     background-color: rgba(118, 118, 118, 0.85);
     color: #fff;
     font-size: 1rem;
     padding: 12px 20px;
+    margin-top: 10px;
     border: none;
+    border-radius: 4px;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
     width: 100%;
     box-sizing: border-box;
 }
 
-input[type=submit]:hover {
-    background-color: #888888;
+button[type=submit]:hover {
+    background-color: rgba(255, 0, 0, 0.397);
+
 }
 
 /* FOOTER */
@@ -233,26 +260,34 @@ footer {
     padding-right: 80px;
     padding-top: 75px;
     padding-bottom: 80px;
-    font-size: 3rem;
     z-index: 5;
+    position: relative;
 }
 
-#linkedin {
+
+.footerl {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
     color: #fff;
 }
 
-#list {
-    list-style: none;
-    font-size: 1.5rem;
-    padding-top: 100px;
+.footert {
+font-size: 1.5rem;
+padding-bottom: 50px;
 }
 
-li {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 8%;
-    padding-right: 8%;
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -268,4 +303,160 @@ li {
     backdrop-filter: blur(4px);
     border-radius: 3px;
     border: 1px solid  rgba(255, 255, 255, 0.18);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#connex {
+    height: 1000px;
+    z-index: 10;
+}
+
+#forlog {
+    margin-bottom: 350px;
+    padding: 15px;
+    text-align: center;
+    margin-top: 100px;
+    z-index: 2;
+    background: linear-gradient( 0deg, rgba(135, 135, 135, 0.2), rgba(255, 255, 255, 0.25));
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 37%);
+    backdrop-filter: blur(4px);
+    border-radius: 3px;
+    border: 1px solid  rgba(255, 255, 255, 0.18);
+}
+
+#pass {
+    width: 100%;
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 20px;
+    background-color: rgba(118, 118, 118, 0.85);
+    color: #fff;
+    resize: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CV */
+
+  #boss {
+    margin-bottom: 350px;
+padding: 15px;
+z-index: 5;
+background: linear-gradient( 0deg, rgba(135, 135, 135, 0.2), rgba(255, 255, 255, 0.25));
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 37%);
+backdrop-filter: blur(4px);
+border-radius: 3px;
+border: 1px solid  rgba(255, 255, 255, 0.18);
+color: #000;
+}
+
+  #alpha {
+    width: 529px;
+    height: 754px;
+    background-color: rgb(255, 255, 255);
+}
+
+#cotgau {
+    float: left;
+    width: 180px;
+    height: 100%;
+    background-color: #C2C2C2;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: #C2C2C2 solid 10px;
+}
+
+#z {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.gau {
+    width: 160px;
+    height: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+#cotdro {
+    float: right;
+    width: 329px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    font-size: 14px;
+    
+}
+
+#a {
+    width: 329px;
+    height: 100px;
+    font-size: 20px;   
+    padding-top: 13px;
+    margin-bottom: 13px;
+}
+
+.dro {
+    width: 329px;
+    height: auto;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h4 {
+    background-color: #C2C2C2;
+    padding: 5px 0px 5px 5px;
+}
+
+span {
+    font-weight : bold;
 }
